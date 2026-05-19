@@ -4,428 +4,453 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Milo - Creative Portfolio</title>
-
-    
+    <title>eliott - Creative Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-  
     <link rel="stylesheet" href="main.css" />
+
+  
+    <style>
+      @media (max-width: 768px) {
+        .nav-menu {
+          display: none; 
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #ffffff;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          z-index: 9999;
+        }
+        .nav-menu.active {
+          display: block !important; /* إجبار القائمة على الظهور عند الضغط */
+        }
+        .nav-menu ul {
+          flex-direction: column;
+          padding: 20px;
+          margin: 0;
+          list-style: none;
+        }
+        .nav-menu ul li {
+          margin: 15px 0;
+          text-align: center;
+        }
+        
+     
+        body.dark-theme .nav-menu {
+          background-color: #1a1a1a !important;
+          border-bottom: 1px solid #333;
+        }
+        body.dark-theme .nav-menu ul li a {
+          color: #ffffff !important;
+        }
+      }
+
+  
+      body.dark-theme .mobile-menu-btn,
+      body.dark-theme .mobile-menu-btn i {
+        color: #ffffff !important;
+      }
+      body.dark-theme .theme-toggle,
+      body.dark-theme .theme-toggle i {
+        color: #ffffff !important;
+      }
+    </style>
   </head>
   <body>
 
-
     <header class="main-header">
-    <div class="container">
-        <div class="header-wrapper">
-            <div class="logo">
-                <a href="#">eli<span>ott</span></a>
+      <div class="container">
+          <div class="header-wrapper">
+              <div class="logo">
+                  <a href="#">eli<span>ott</span></a>
+              </div>
+
+              <nav class="nav-menu">
+                  <ul>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="#portfolio">Work</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#clients">Reviews</a></li>
+                      <li><a href="#blog">Blog</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+              </nav>
+
+              <div class="header-actions">
+                  <button class="theme-toggle" title="Toggle Dark Mode">
+                      <i class="far fa-moon"></i>
+                  </button>
+                  <a href="#contact" class="btn-hire-me">Hire me &rarr;</a>
+                  <button class="mobile-menu-btn">
+                      <i class="fas fa-bars"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </header>
+
+    <!-- Start Landing (Hero) Section -->
+    <div class="landing">
+      <div class="container">
+        <div class="landing-content">
+          <div class="text">
+            <span class="status">Available for work</span>
+            <h1>Hi, I'm <span class="highlight">eliott</span></h1>
+            <p>
+              Freelance <strong>UI/UX Designer & Frontend Developer</strong>. I design and build digital products that people love to use — fast, clean, and accessible.
+            </p>
+            <div class="buttons">
+              <a href="#work" class="btn-dark">View my work <i class="fas fa-chevron-down"></i></a>
+              <a href="#contact" class="btn-light">Get in touch</a>
+            </div>
+            <div class="stats">
+              <div class="stat-item">
+                <h3>34+</h3>
+                <span>Projects done</span>
+              </div>
+              <div class="stat-item">
+                <h3>21+</h3>
+                <span>Happy clients</span>
+              </div>
+              <div class="stat-item">
+                <h3>5y</h3>
+                <span>Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="image">
+            <div class="img-wrapper">
+              <img src="images/hero-person.jpg" alt="eliott Profile" />
+              <span class="badge">Open to projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Landing (Hero) Section -->
+
+    <!-- Start Services Section -->
+    <div class="services" id="services">
+      <div class="container">
+        <div class="main-heading">
+          <span class="subtitle">What I Do</span>
+          <h2>Services</h2>
+        </div>
+        <div class="services-content">
+          <div class="service-card">
+            <div class="icon-box">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>From wireframes to polished Figma prototypes. Intuitive, visually compelling interfaces that convert visitors into users and put usability first.</p>
+          </div>
+          <div class="service-card dark">
+            <div class="icon-box">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Frontend Dev</h3>
+            <p>Production-grade code with Tailwind CSS and Alpine.js. Pixel-perfect, fully responsive, SEO-friendly and blazing fast — no bloat, no heavy frameworks.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-box">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Landing Pages</h3>
+            <p>High-converting pages for SaaS, apps and personal brands. Designed to communicate value instantly and drive action from the first scroll.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services Section -->
+
+    <!-- Start Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <div class="main-heading">
+                    <span class="subtitle">PORTFOLIO</span>
+                    <h2>Selected work</h2>
+                </div>
+                <a href="#" class="all-projects">All projects &rarr;</a>
             </div>
 
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Work</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#clients">Reviews</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="portfolio-grid">
+                <div class="work-card large-card">
+                    <div class="work-img">
+                        <img src="images/project1.jpg" alt="Novu Dashboard">
+                    </div>
+                    <div class="work-content">
+                        <div class="tags">
+                            <span class="tag">SaaS</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <h3>Novu — SaaS Dashboard</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quis, odit nam aperiam fugiat optio libero. Nisi, minus officiis eius odio tempora velit fugit at, id labore ut libero reiciendis!</p>
+                        <a href="#" class="case-link">View case study &rarr;</a>
+                    </div>
+                </div>
 
-            <div class="header-actions">
-                <button class="theme-toggle" title="Toggle Dark Mode">
-                    <i class="far fa-moon"></i>
-                </button>
-                <a href="#contact" class="btn-hire-me">Hire me &rarr;</a>
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="right-stack">
+                    <div class="work-card small-card">
+                        <div class="work-img">
+                            <img src="images/project2.jpg" alt="Finlo App">
+                        </div>
+                        <div class="work-content">
+                            <div class="tags">
+                                <span class="tag">Fintech</span>
+                                <span class="tag">Landing page</span>
+                            </div>
+                            <h3>Finlo — Fintech App</h3>
+                            <p>Marketing site and onboarding flow for a personal finance app targeting young professionals.</p>
+                            <a href="#" class="case-link">View case study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="work-card small-card">
+                        <div class="work-img">
+                            <img src="images/project3.jpg" alt="Orea Agency">
+                        </div>
+                        <div class="work-content">
+                            <div class="tags">
+                                <span class="tag">Agency</span>
+                                <span class="tag">Animation</span>
+                            </div>
+                            <h3>Orea — Creative Agency</h3>
+                            <p>Bold editorial site for a Paris-based branding studio. Scroll-driven animations and custom cursor.</p>
+                            <a href="#" class="case-link">View case study &rarr;</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</header>
-  <!-- Start Landing (Hero) Section -->
-<div class="landing">
-  <div class="container">
-    <div class="landing-content">
-      <div class="text">
-        <span class="status">Available for work</span>
-        <h1>Hi, I'm <span class="highlight">Milo</span></h1>
-        <p>
-          Freelance <strong>UI/UX Designer & Frontend Developer</strong>. I design and build digital products that people love to use — fast, clean, and accessible.
-        </p>
-        <div class="buttons">
-          <a href="#work" class="btn-dark">View my work <i class="fas fa-chevron-down"></i></a>
-          <a href="#contact" class="btn-light">Get in touch</a>
-        </div>
-        <div class="stats">
-          <div class="stat-item">
-            <h3>34+</h3>
-            <span>Projects done</span>
-          </div>
-          <div class="stat-item">
-            <h3>21+</h3>
-            <span>Happy clients</span>
-          </div>
-          <div class="stat-item">
-            <h3>5y</h3>
-            <span>Experience</span>
-          </div>
-        </div>
-      </div>
-      <div class="image">
-        <div class="img-wrapper">
-          <img src="images/hero-person.jpg" alt="Milo Profile" />
-          <span class="badge">Open to projects</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Landing (Hero) Section -->
+    </section>
+    <!-- End Portfolio Section -->
 
-<!-- Start Services Section -->
-<div class="services" id="services">
-  <div class="container">
-    <div class="main-heading">
-      <span class="subtitle">What I Do</span>
-      <h2>Services</h2>
-    </div>
-    <div class="services-content">
-      <!-- Card 1 -->
-      <div class="service-card">
-        <div class="icon-box">
-          <!-- تم تغيير fa-solid إلى fas وتغيير fa-display إلى fa-desktop -->
-          <i class="fas fa-desktop"></i>
-        </div>
-        <h3>UI/UX Design</h3>
-        <p>From wireframes to polished Figma prototypes. Intuitive, visually compelling interfaces that convert visitors into users and put usability first.</p>
-      </div>
-      <!-- Card 2 (Featured Dark Card) -->
-      <div class="service-card dark">
-        <div class="icon-box">
-          <!-- تم تغيير fa-solid إلى fas -->
-          <i class="fas fa-code"></i>
-        </div>
-        <h3>Frontend Dev</h3>
-        <p>Production-grade code with Tailwind CSS and Alpine.js. Pixel-perfect, fully responsive, SEO-friendly and blazing fast — no bloat, no heavy frameworks.</p>
-      </div>
-      <!-- Card 3 -->
-      <div class="service-card">
-        <div class="icon-box">
-          <!-- تم تغيير fa-solid إلى fas -->
-          <i class="fas fa-rocket"></i>
-        </div>
-        <h3>Landing Pages</h3>
-        <p>High-converting pages for SaaS, apps and personal brands. Designed to communicate value instantly and drive action from the first scroll.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Services Section -->
-
-
-<!-- Start Portfolio Section -->
-
-
-<section class="portfolio" id="portfolio">
-    <div class="container">
-        <!-- رأس القسم -->
-        <div class="portfolio-header">
-            <div class="main-heading">
-                <span class="subtitle">PORTFOLIO</span>
-                <h2>Selected work</h2>
+    <!-- Start about Section -->
+    <section class="about-me" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <div class="img-wrapper">
+             <img src="images/hero-person.jpg" alt="Mohammad" width="400" height="400" style="object-fit: cover; border-radius: 40px;">
+              <span class="status-badge">Open to projects</span>
             </div>
-            <a href="#" class="all-projects">All projects &rarr;</a>
-        </div>
-
-        <!-- شبكة الأعمال -->
-        <div class="portfolio-grid">
+          </div>
+          
+          <div class="about-text">
+            <span class="subtitle">ABOUT ME</span>
+            <h2>A bit about who I am</h2>
+            <p>I'm Mohammad, a professional video editor, web developer, and digital content creator. I specialize in building high-performance digital products and creating compelling visual stories, especially in the true crime genre through my project "Jarimabook".</p>
+            <p>I believe in clean code and intuitive design. When I'm not coding or editing, I'm exploring new AI tools or researching sustainable agricultural projects.</p>
             
-            <!-- العمود الأيسر (مشروع طويل) -->
-            <div class="work-card large-card">
-                <div class="work-img">
-                    <img src="images/project1.jpg" alt="Novu Dashboard">
-                </div>
-                <div class="work-content">
-                    <div class="tags">
-                        <span class="tag">SaaS</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">Tailwind</span>
-                    </div>
-                    <h3>Novu — SaaS Dashboard</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quis, odit nam aperiam fugiat optio libero. Nisi, minus officiis eius odio tempora velit fugit at, id labore ut libero reiciendis!</p>
-                   
-                   
-                    <a href="#" class="case-link">View case study &rarr;</a>
-                </div>
+            <div class="stack-section">
+              <span class="stack-title">STACK & TOOLS</span>
+              <div class="skills-tags">
+                <span>Tailwind CSS</span> <span>WordPress</span> <span>Blogger</span> 
+                <span>Figma</span> <span>Adobe Premiere</span> <span>AI Tools</span>
+              </div>
             </div>
-
-            <!-- العمود الأيمن (مشروعين أصغر) -->
-            <div class="right-stack">
-                
-                <div class="work-card small-card">
-                    <div class="work-img">
-                        <img src="images/project2.jpg" alt="Finlo App">
-                    </div>
-                    <div class="work-content">
-                        <div class="tags">
-                            <span class="tag">Fintech</span>
-                            <span class="tag">Landing page</span>
-                        </div>
-                        <h3>Finlo — Fintech App</h3>
-                        <p>Marketing site and onboarding flow for a personal finance app targeting young professionals.</p>
-                        <a href="#" class="case-link">View case study &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="work-card small-card">
-                    <div class="work-img">
-                        <img src="images/project3.jpg" alt="Orea Agency">
-                    </div>
-                    <div class="work-content">
-                        <div class="tags">
-                            <span class="tag">Agency</span>
-                            <span class="tag">Animation</span>
-                        </div>
-                        <h3>Orea — Creative Agency</h3>
-                        <p>Bold editorial site for a Paris-based branding studio. Scroll-driven animations and custom cursor.</p>
-                        <a href="#" class="case-link">View case study &rarr;</a>
-                    </div>
-                </div>
-
-            </div>
+          </div>
         </div>
-    </div>
-</section>
-<!-- End Portfolio Section -->
+      </div>
+    </section>
+    <!-- End about Section -->
 
-<!-- Start about Section -->
-<section class="about-me" id="about">
-  <div class="container">
-    <div class="about-content">
-      <div class="about-image">
-        <div class="img-wrapper">
-         <img src="images/hero-person.jpg" alt="Mohammad" width="400" height="400" style="object-fit: cover; border-radius: 40px;">
+    <!-- start clients Section -->
+    <section class="testimonials" id="clients">
+      <div class="container">
+        <div class="main-heading center">
+          <span class="subtitle">SOCIAL PROOF</span>
+          <h2>What clients say</h2>
+        </div>
         
-          <span class="status-badge">Open to projects</span>
-        </div>
-      </div>
-      
-      <div class="about-text">
-        <span class="subtitle">ABOUT ME</span>
-        <h2>A bit about who I am</h2>
-        <p>I'm Mohammad, a professional video editor, web developer, and digital content creator. I specialize in building high-performance digital products and creating compelling visual stories, especially in the true crime genre through my project "Jarimabook".</p>
-        <p>I believe in clean code and intuitive design. When I'm not coding or editing, I'm exploring new AI tools or researching sustainable agricultural projects.</p>
-        
-        <div class="stack-section">
-          <span class="stack-title">STACK & TOOLS</span>
-          <div class="skills-tags">
-            <span>Tailwind CSS</span> <span>WordPress</span> <span>Blogger</span> 
-            <span>Figma</span> <span>Adobe Premiere</span> <span>AI Tools</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- End about Section -->
-
-<!-- start clients Section -->
-
-
-
-<section class="testimonials" id="clients">
-  <div class="container">
-    <div class="main-heading center">
-      <span class="subtitle">SOCIAL PROOF</span>
-      <h2>What clients say</h2>
-    </div>
-    
-    <div class="testimonials-grid">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p>"Mohammad delivered our project in record time. His attention to detail in video editing and SEO is exceptional."</p>
-        <div class="client-info">
-          <img src="images/client1.jpg" alt="Client">
-          <div>
-            <h4>Sarah Müller</h4>
-            <span>CEO, TechFlow</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testi-card dark">
-        <div class="stars">★★★★★</div>
-        <p>"Working with Mohammad is a dream. He asks the right questions and the final web development results exceeded expectations."</p>
-        <div class="client-info">
-          <img src="images/client2.jpg" alt="Client">
-          <div>
-            <h4>Thomas Renault</h4>
-            <span>Founder, Finlo</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p>"Clean code, great communication, and a polished final site. Highly recommended for any digital project."</p>
-        <div class="client-info">
-          <img src="images/client3.jpg" alt="Client">
-          <div>
-            <h4>Camille Dufresne</h4>
-            <span>Director, Orea</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- End clients Section -->
-
-
-
-<section class="blog" id="blog">
-    <div class="container">
-        <div class="portfolio-header">
-            <div class="main-heading">
-                <span class="subtitle">THOUGHTS</span>
-                <h2>From the blog</h2>
+        <div class="testimonials-grid">
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"Mohammad delivered our project in record time. His attention to detail in video editing and SEO is exceptional."</p>
+            <div class="client-info">
+              <img src="images/client1.jpg" alt="Client">
+              <div>
+                <h4>Sarah Müller</h4>
+                <span>CEO, TechFlow</span>
+              </div>
             </div>
-            <a href="#" class="all-projects">All articles &rarr;</a>
+          </div>
+          
+          <div class="testi-card dark">
+            <div class="stars">★★★★★</div>
+            <p>"Working with Mohammad is a dream. He asks the right questions and the final web development results exceeded expectations."</p>
+            <div class="client-info">
+              <img src="images/client2.jpg" alt="Client">
+              <div>
+                <h4>Thomas Renault</h4>
+                <span>Founder, Finlo</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"Clean code, great communication, and a polished final site. Highly recommended for any digital project."</p>
+            <div class="client-info">
+              <img src="images/client3.jpg" alt="Client">
+              <div>
+                <h4>Camille Dufresne</h4>
+                <span>Director, Orea</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+    <!-- End clients Section -->
 
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div class="blog-img">
-                    <img src="images/blog1.jpg" alt="Tailwind CSS">
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="portfolio-header">
+                <div class="main-heading">
+                    <span class="subtitle">THOUGHTS</span>
+                    <h2>From the blog</h2>
                 </div>
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span class="tag">Design</span>
-                        <span class="date">Mar 8, 2025</span>
+                <a href="#" class="all-projects">All articles &rarr;</a>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="images/blog1.jpg" alt="Tailwind CSS">
                     </div>
-                    <h3>Why I ditched heavy CSS frameworks for Tailwind</h3>
-                    <p>After years of fighting specificity wars, here's what finally convinced me to make the switch.</p>
-                    <a href="#" class="read-more">Read more &rarr;</a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div class="blog-img">
-                    <img src="images/blog2.jpg" alt="Design System">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span class="tag">Dev</span>
-                        <span class="date">Feb 21, 2025</span>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="tag">Design</span>
+                            <span class="date">Mar 8, 2025</span>
+                        </div>
+                        <h3>Why I ditched heavy CSS frameworks for Tailwind</h3>
+                        <p>After years of fighting specificity wars, here's what finally convinced me to make the switch.</p>
+                        <a href="#" class="read-more">Read more &rarr;</a>
                     </div>
-                    <h3>Building a design system from scratch in a weekend</h3>
-                    <p>Tokens, components, docs — the process I follow to spin up a coherent system in 48 hours.</p>
-                    <a href="#" class="read-more">Read more &rarr;</a>
                 </div>
-            </div>
 
-            <div class="blog-card">
-                <div class="blog-img">
-                    <img src="images/blog3.jpg" alt="Freelancing">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span class="tag">Freelance</span>
-                        <span class="date">Jan 14, 2025</span>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="images/blog2.jpg" alt="Design System">
                     </div>
-                    <h3>5 lessons from my first year of full-time freelancing</h3>
-                    <p>Contracts, pricing, scope creep — the things nobody tells you before you go solo.</p>
-                    <a href="#" class="read-more">Read more &rarr;</a>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="tag">Dev</span>
+                            <span class="date">Feb 21, 2025</span>
+                        </div>
+                        <h3>Building a design system from scratch in a weekend</h3>
+                        <p>Tokens, components, docs — the process I follow to spin up a coherent system in 48 hours.</p>
+                        <a href="#" class="read-more">Read more &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="images/blog3.jpg" alt="Freelancing">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="tag">Freelance</span>
+                            <span class="date">Jan 14, 2025</span>
+                        </div>
+                        <h3>5 lessons from my first year of full-time freelancing</h3>
+                        <p>Contracts, pricing, scope creep — the things nobody tells you before you go solo.</p>
+                        <a href="#" class="read-more">Read more &rarr;</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
-<section class="contact" id="contact">
-    <div class="container">
-        <div class="contact-box">
-            <div class="contact-info">
-                <span class="subtitle">GET IN TOUCH</span>
-                <h2>Let's work together</h2>
-                <p>I'm open to UI/UX and frontend missions, short or long-term. Landing page, full product redesign, or just a second pair of eyes — let's talk.</p>
-                
-                <div class="contact-links">
-                    <a href="mailto:hello@aboroba.dev"><i class="far fa-envelope"></i> hello@aboroba.dev</a>
-                    <a href="#"><i class="fab fa-linkedin"></i> linkedin.com/in/aboroba-dev</a>
-                    <a href="#"><i class="fab fa-github"></i> github.com/aboroba-dev</a>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <span class="subtitle">GET IN TOUCH</span>
+                    <h2>Let's work together</h2>
+                    <p>I'm open to UI/UX and frontend missions, short or long-term. Landing page, full product redesign, or just a second pair of eyes — let's talk.</p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:hello@aboroba.dev"><i class="far fa-envelope"></i> hello@aboroba.dev</a>
+                        <a href="#"><i class="fab fa-linkedin"></i> linkedin.com/in/aboroba-dev</a>
+                        <a href="#"><i class="fab fa-github"></i> github.com/aboroba-dev</a>
+                    </div>
                 </div>
-            </div>
 
-            <form class="contact-form">
-                <div class="form-row">
-                    <div class="input-group">
-                        <label>Name *</label>
-                        <input type="text" placeholder="Your Name" required>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Name *</label>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email *</label>
+                            <input type="email" placeholder="email@company.com" required>
+                        </div>
                     </div>
                     <div class="input-group">
-                        <label>Email *</label>
-                        <input type="email" placeholder="email@company.com" required>
+                        <label>Subject</label>
+                        <input type="text" placeholder="Project inquiry">
                     </div>
-                </div>
-                <div class="input-group">
-                    <label>Subject</label>
-                    <input type="text" placeholder="Project inquiry">
-                </div>
-                <div class="input-group">
-                    <label>Message *</label>
-                    <textarea placeholder="Tell me about your project..." required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Send message &rarr;</button>
-            </form>
+                    <div class="input-group">
+                        <label>Message *</label>
+                        <textarea placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send message &rarr;</button>
+                </form>
+            </div>
+
+            <footer class="main-footer">
+                <p>&copy; 2026 Abo Roba. All rights reserved.</p>
+                <p>Built with ❤️ by <strong>Abo Roba</strong></p>
+            </footer>
         </div>
+    </section>
 
-        <footer class="main-footer">
-            <p>&copy; 2026 Abo Roba. All rights reserved.</p>
-         <p>Built with ❤️ by <strong>Abo Roba</strong></p>
-        </footer>
-    </div>
-</section>
-
-
-
-<script>
-    // تفعيل قائمة الجوال
+  <script>
+   
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a'); // تحديد جميع روابط القائمة
 
-    mobileBtn.addEventListener('click', () => {
+    // دالة تبديل حالة القائمة (فتح / إغلاق)
+    function toggleMenu() {
         navMenu.classList.toggle('active');
-        // تغيير الأيقونة من هامبرغر إلى X عند الفتح
         const icon = mobileBtn.querySelector('i');
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-times');
+    }
+
+  
+    mobileBtn.addEventListener('click', toggleMenu);
+
+    // عند الضغط على أي رابط داخل القائمة (إغلاق القائمة تلقائياً)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // نتحقق أولاً إذا كانت القائمة مفتوحة (في وضع الجوال) قبل إغلاقها
+            if (navMenu.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
     });
 
-    // تفعيل الوضع الليلي
+
     const themeBtn = document.querySelector('.theme-toggle');
     const body = document.body;
 
     themeBtn.addEventListener('click', () => {
         body.classList.toggle('dark-theme');
         
-        // تغيير أيقونة القمر إلى شمس
         const themeIcon = themeBtn.querySelector('i');
         if (body.classList.contains('dark-theme')) {
             themeIcon.classList.replace('far', 'fas');
